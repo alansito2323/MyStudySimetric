@@ -1,0 +1,91 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    Layout = "";
+}
+@model Users
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="/style/style-signup.css" />
+    <title>Login</title>
+</head>
+<body>
+    <form asp-action="Signup2" asp-controller="Home" method="post" role="form">
+    <div class="container">
+        <div class="signup-container">
+            <div class="input">
+                <h1>STUDY.</h1>
+                <h3 id="welcome-message">Sign Up</h3>
+                <p>Name:</p>
+                    <input asp-for="Nombre" type="name"
+                       class="input-field"
+                       placeholder="Enter Name" 
+                       required
+                       pattern="[A-Za-z ]+" 
+                       style="text-transform: capitalize;"/>
+                <p>Last Name:</p>
+                    <input input asp-for="Apellido" type="lastname"
+                       class="input-field"
+                       placeholder="Enter Last Name"
+                           required
+                           pattern="[A-Za-z ]+"
+                           style="text-transform: capitalize;" />
+                 <p>Cellphone:</p>
+                    <input asp-for="Cellphone" type="cellphone"
+                       class="input-field"
+                       placeholder="Enter Cell Number"
+                       required
+                       pattern="[0-9]{10,}"
+                       minlength="10" /> <!-- Agrega la validación de longitud mínima -->
+                <p>Enrollment:</p>
+                    <input input asp-for="Matricula" type="enrollment"
+                       class="input-field"
+                       placeholder="Enter Enrollment"
+                           required
+                           pattern="^[0-9]+$"/>
+               <p>Email:</p>
+                    <input asp-for="Email" type="email"
+                       class="input-field"
+                       placeholder="Enter Email"
+                       required
+                       pattern="[a-zA-Z0-9._%+-]+@@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(com)$"
+                       minlength="10" /> <!-- Agrega la validación de longitud mínima -->
+                    <p>Password:</p>
+                    <input asp-for="Contraseña" type="password"
+                           class="input-field"
+                           placeholder="Enter Password"
+                           required
+                           pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@@$!%*?&])[A-Za-z\d@@$!%*?&]{10,}$" /> <!-- Cambiado a una longitud mínima de 10 caracteres -->
+                <a asp-controller="Home" asp-action="Index">
+                    <button type="submit"class="primary-btn">Create account</button>
+                </a>
+                    <button class="secondary-btn" onclick="location.href='@Url.Action("Login", "Home")'">Log In</button>
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+@if (TempData["SuccessMessage2"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: '!Ooooops',
+            text: '@TempData["SuccessMessage2"]'
+        });
+    </script>
+}
+
+

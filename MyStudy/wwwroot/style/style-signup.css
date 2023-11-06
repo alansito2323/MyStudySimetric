@@ -1,0 +1,129 @@
+body {
+  font-family: "Mukta", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+  background-size: cover;
+  background-image: url("/images/bg-login.jpg");
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.signup-container {
+  background-color: white;
+  width: 50%;
+  height: 98%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5%;
+}
+.input {
+  align-items: center;
+  width: 60%;
+  padding: 10%;
+}
+#welcome-message {
+  font-size: 100%;
+  width: 50%;
+  padding-top: 0;
+  margin-top: 0;
+}
+.input h1 {
+  font-size: 250%;
+  background-image: linear-gradient(
+    90deg,
+    rgba(0, 0, 55, 1) 4%,
+    rgba(229, 39, 78, 1) 18%,
+    rgba(64, 191, 166, 1) 34%
+  );
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.input h3 {
+  font-size: 150%;
+  padding-bottom: 0;
+  margin: 0;
+  width: 60%;
+}
+
+.input p {
+  font-size: 90%;
+  width: 60%;
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: 100%;
+  height: 1.5rem;
+  padding: 0.5rem;
+  border: double 1.5px transparent;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(white, white),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 55, 1) 4%,
+      rgba(108, 18, 66, 1) 22%,
+      rgba(229, 39, 78, 1) 42%,
+      rgba(241, 137, 115, 1) 60%,
+      rgba(156, 163, 139, 1) 77%,
+      rgba(64, 191, 166, 1) 90%
+    );
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  margin-bottom: 0.3rem;
+}
+
+.input-field:focus {
+  outline: none;
+}
+
+.primary-btn {
+  width: 48%;
+  height: 2.5rem;
+  float: left;
+  background-color: #e5174e;
+  color: white;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0px 2px 4px rgba(181, 18, 62, 1);
+}
+
+.secondary-btn {
+  margin-top: 1rem;
+  width: 48%;
+  height: 2.5rem;
+  float: right;
+  background-color: white;
+  color: black;
+  border-radius: 0.5rem;
+  border-color: #e5174e;
+  font-family: "Ubuntu", sans-serif;
+  font-size: large;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover {
+  background-color: #b5123e;
+}
+.secondary-btn:hover {
+  background-color: #b5123e;
+  color: white;
+  border: none;
+}

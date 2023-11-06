@@ -1,0 +1,88 @@
+﻿@using Microsoft.AspNetCore.Http
+@{
+    Layout = "";
+}
+@model Users
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;700&family=Ubuntu:wght@300;400;500;700&display=swap"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="/style/style-login.css" />
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div id="left-image">
+            <div id="title-image"><h1>STUDY.</h1></div>
+        </div>
+        <div class="login-container">
+            <div class="input">
+
+                <h2>STUDY.</h2>
+                <h3>Welcome Back</h3>
+                <p id="welcome-message">Login to continue</p>
+                <form asp-action="Login2" asp-controller="Home" method="post" role="form">
+                    <p>Email Address:</p>
+                    <input asp-for="Email" type="email" class="input-field" placeholder="Enter Email" required />
+                    <p>Password:</p>
+                    <input asp-for="Contraseña" type="password" class="input-field" placeholder="Enter Password" required />
+                    <a asp-controller="Home" asp-action="Index">
+                        <button type="submit" class="primary-btn">Login</button>
+                    </a>
+                </form>
+                <a asp-controller="Home" asp-action="Signup">
+                    <button class="secondary-btn" onclick="">Sign up</button>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+
+
+@if (TempData["SuccessMessage1"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Nice',
+            text: '@TempData["SuccessMessage1"]'
+        });
+    </script>
+}
+
+@if (TempData["SuccessMessage4"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: '!Ooooops',
+            text: '@TempData["SuccessMessage4"]'
+        });
+    </script>
+}
+
+@if (TempData["SuccessMessage5"] != null)
+{
+    <script>
+        Swal.fire({
+            icon: 'success',
+            title: 'Nice',
+            text: '@TempData["SuccessMessage5"]'
+        });
+    </script>
+}
+
+
+
