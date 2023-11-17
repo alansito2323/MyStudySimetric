@@ -88,7 +88,7 @@ namespace MyStudy.Controllers
             bool nulll = false;
             try
             {
-                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-20PBO5J;Initial Catalog=Educational;Integrated Security=True"))
+                using (SqlConnection connection = new SqlConnection("Data Source=DESKTOP-8USN98H;Initial Catalog=Educational;Integrated Security=True"))
                 {
                     connection.Open();
 
