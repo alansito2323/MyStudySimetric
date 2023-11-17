@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RhdLQrmI3BmawgXEHVQqqymqzrYsRR/uc4d5ogABMIel/2Eb5tmm4XIn2XexZZPsbobyPKyN5388LT0u2owUSQ==",
+  "dgSpecHash": "VcBKZIy1ZxF1TFbet6IXmlkeMFbGGTBBoAzs9BeQgCPjq6VhxPbQBEWDjY/hbI78Opak1paHAL8zAbQAhSDfrA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\MyStudySimetric\\MyStudy\\MyStudy.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\MyStudyAsimetric\\MyStudySimetric\\MyStudy\\MyStudy.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dell\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Dell\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
