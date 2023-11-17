@@ -18,7 +18,7 @@ namespace MyStudy.Logica
 
             try
             {
-                using (SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-20PBO5J;Initial Catalog=Educational;Integrated Security=True"))
+                using (SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-8USN98H;Initial Catalog=Educational;Integrated Security=True"))
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_LoginUsuario", conexion);
@@ -54,7 +54,7 @@ namespace MyStudy.Logica
 
             try
             {
-                using (SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-20PBO5J;Initial Catalog=Educational;Integrated Security=True"))
+                using (SqlConnection conexion = new SqlConnection("Data Source=DESKTOP-8USN98H;Initial Catalog=Educational;Integrated Security=True"))
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_AltaUsuario", conexion);
